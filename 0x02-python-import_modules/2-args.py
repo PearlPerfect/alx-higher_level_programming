@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-if _name_ == "_main_":
+if __name__ == "__main__":
     import sys
     args = len(sys.argv)
     print("{} ".format(args - 1), end="")
