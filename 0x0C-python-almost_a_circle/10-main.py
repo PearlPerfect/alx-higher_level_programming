@@ -1,13 +1,16 @@
 #!/usr/bin/python3
-Student = __import__('10-student').Student
+""" 10-main """
+from models.square import Square
 
-student_1 = Student("John", "Doe", 23)
-student_2 = Student("Bob", "Dylan", 27)
+if __name__ == "__main__":
 
-j_student_1 = student_1.to_json()
-j_student_2 = student_2.to_json(['first_name', 'age'])
-j_student_3 = student_2.to_json(['middle_name', 'age'])
+    s1 = Square(5)
+    print(s1)
+    print(s1.size)
+    s1.size = 10
+    print(s1)
 
-print(j_student_1)
-print(j_student_2)
-print(j_student_3)
+    try:
+        s1.size = "9"
+    except Exception as e:
+        print("[{}] {}".format(e.__class__.__name__, e))
