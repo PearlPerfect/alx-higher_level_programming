@@ -4,6 +4,7 @@
 
 def pascal_triangle(n):
     """This represents Pascal Triangle n.
+
     Returns an empty list if n <= 0
     """
     lst = []
